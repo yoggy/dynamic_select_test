@@ -1,0 +1,10 @@
+div#hidden_form {
+  visibility:hidden;
+}
+
+div#form_container {
+  border:2px solid;
+  padding: 2em;
+  margin: 2em;
+}
+

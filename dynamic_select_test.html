@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="dynamic_select_test.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="dynamic_select_test.js"></script>
+    <title>dynamic selecct test</title>
+  </head>
+  <body>
+    <h2>select test</h2>
+    <form id="test_form">
+      <select id="form_select">
+        <option value="#form_01">フォーム1を表示</option>
+        <option value="#form_02">フォーム2を表示</option>
+        <option value="#form_03">フォーム3を表示</option>
+      </select>
+      <div id="form_container">
+        <!-- select_test.jsのコードが実行されることでここにhidden_formの内容が入る -->
+      </div>
+      <input type="submit">
+    </form>
+    <div id="hidden_form">
+      <div id="form_01">
+        フォームその1 <br/>
+        <input type="text" name="username" value="user1">
+        <input type="password" name="password" value="password1">
+        <input type="checkbox" name="checkbox" value="check1">ああああ
+      </div>
+      <div id="form_02">
+        フォームその2 <br/>
+        <div>
+          <input type="text" name="username" value="user2">
+        </div>
+        <div>
+          <input type="password" name="password" value="password2">
+        </div>
+        <div>
+          <input type="checkbox" name="checkbox" value="check1">いいいい
+        </div>
+      </div>
+      <div id="form_03">
+        フォームその3 <br/>
+        <input type="text" name="username" value="user3">
+        <input type="password" name="password" value="password3">
+        <div>
+          <input type="radio" name="radio" value="radio1">ラジオボタン1
+          <input type="radio" name="radio" value="radio1">ラジオボタン2
+          <input type="radio" name="radio" value="radio1">ラジオボタン3
+        </div>
+      </div>
+    </div>
+  </body>
+<html>
