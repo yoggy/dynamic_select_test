@@ -1,7 +1,6 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="dynamic_select_test.css" type="text/css" />
     <script src="dynamic_select_test.js"></script>
     <title>dynamic selecct test</title>
   </head>
@@ -13,12 +12,12 @@
         <option value="form_02">フォーム2を表示</option>
         <option value="form_03">フォーム3を表示</option>
       </select>
-      <div id="form_container">
+      <div id="form_container" style="border:2px solid;padding: 2em;margin: 2em;">
         <!-- select_test.jsのコードが実行されることでここにhidden_formの内容が入る -->
       </div>
       <input type="submit">
     </form>
-    <div id="hidden_form">
+    <div id="hidden_form" style="visibility:hidden;">
       <div id="form_01">
         フォームその1 <br/>
         <input type="text" name="username" value="user1">
