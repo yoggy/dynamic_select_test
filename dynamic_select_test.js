@@ -1,19 +1,23 @@
 function load_form(id) {
-  var form_html = $(id).html();
-  $("#form_container").html(form_html);
+  var form_html = document.getElementById(id).innerHTML;
+  var form_container = document.getElementById("form_container");
+  form_container.innerHTML = form_html;
 }
 
 function init() {
-  load_form("#form_01");
+  load_form("form_01");
 
-  $('#form_select').change(function(){
-    $('#form_select option:selected').each(function () {
-      var selected_id = $(this).attr("value");
-      load_form(selected_id);
-    });
-  });
+  var form_select = document.getElementById("form_select");
+  form_select.onchange = function() {
+    var t = null;
+    for(var c = form_select.firstChild; c != null; c = c.nextSibling){
+      if (typeof c.selected == "undefined") continue;
+      if (c.selected == true) t = c;
+    }
+    load_form(t.value);
+  };
 }
 
-$(document).ready(function(){
+window.onload = function() {
   init();
-});
+};
